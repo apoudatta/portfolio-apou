@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  @apply transition-colors duration-200;
+}
+
+.body {
+  @apply bg-slate-100 dark:bg-[#161513] text-black dark:text-white font-outline;
+}
+
+.bg-custom {
+  @apply bg-gradient-to-r from-[#B415FF] to-[#DF8908];
+}
+
+.font-outline {
+  font-family: Outline !important;
+}
+
+/* Navbar style */
+.navbar {
+  @apply flex flex-row fixed top-0 w-full items-center justify-between py-1 px-12 md:px-2 xl:px-40 z-20 bg-slate-100 dark:bg-[#161513] shadow-lg;
+}
+.nav-menu {
+  @apply fixed md:static flex flex-col md:flex-row items-start md:items-center list-none gap-8 md:gap-14 text-xl top-0 bg-[#1F0016] md:bg-transparent w-[350px] md:w-auto h-full md:h-auto z-20 md:z-0 -right-96 md:right-0;
+  transition: right 0.5s;
+}
+.nav-connect {
+  @apply hidden lg:block py-2 lg:py-3 px-4 xl:px-6 ml-0 xl:ml-2 rounded-full bg-custom text-lg xl:text-xl cursor-pointer duration-500 hover:scale-110;
+}
+.nav-menu li {
+  @apply text-3xl md:text-xl pl-24 md:pl-0 pr-2 flex flex-row md:flex-col gap-5 md:gap-1 cursor-pointer;
+}
+.nav-menu li img {
+  @apply flex flex-col m-auto;
+}
+
+.section-heading {
+  @apply relative;
+}
+.section-heading>h1 {
+  @apply p-0 md:px-7 text-5xl md:text-7xl font-semibold;
+}
+.section-heading>img {
+  @apply absolute bottom-0 right-0 -z-10 w-32 md:w-auto -right-5 md:right-0;
+}
+
+/* About */
+.about {
+  @apply flex flex-col items-center gap-20 mx-12 my-16 md:my-20 md:mx-44
+}
+.about-skill {
+  @apply flex flex-row gap-14 md:gap-12 items-center duration-500 hover:scale-110;
+}
+
+.about-skill hr {
+  @apply outline-none border-none h-1.5 md:h-2 rounded-full bg-custom;
+}
+.about-achievement {
+  @apply flex flex-col items-center gap-2.5 md:gap-3 duration-500 hover:scale-110;
+}
+.about-achievement h1 {
+  @apply bg-custom bg-clip-text text-transparent text-4xl md:text-6xl font-bold;
+}
+.about-achievement p {
+  @apply text-base md:text-xl font-medium text-center;
+}
+
+
+/* Service */
+.services {
+  @apply flex flex-col items-center justify-center gap-16 my-5 mx-16 md:my-20 md:mx-40;
+}
+.services-container {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 lg:gap-10 mb-20;
+}
+.services-format {
+  @apply flex flex-col justify-start p-8 md:p-14 gap-5 rounded-xl border-2 border-gray-400 dark:border-white hover:border-[#ff00ff] cursor-pointer duration-500 hover:bg-gradient-to-r from-[#3f0028] to-[#582300] hover:scale-110;
+}
+.services-format h3 {
+  @apply text-2xl md:text-4xl font-semibold;
+}
+.services-format h2 {
+  @apply bg-custom bg-clip-text text-transparent text-3xl md:text-4xl font-bold;
+}
+.services-format p {
+  @apply text-gray-700 dark:text-[#d4d4d4] text-lg md:text-2xl max-w-80;
+}
+
+/* My work */
+.mywork-container {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 md:gap-10;
+}
+.mywork-container img {
+  @apply box-border w-[419px] h-auto duration-300 cursor-pointer hover:scale-110;
+}
+.mywork-showmore {
+  @apply flex gap-4 hover:gap-7 rounded-full border-2 border-gray-400 dark:border-white px-10  md:px-14 py-5 md:py-7 text-lg md:text-xl font-medium mb-10 md:mb-20 hover:duration-700 cursor-pointer; 
+}
