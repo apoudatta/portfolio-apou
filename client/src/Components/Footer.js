@@ -1,6 +1,6 @@
 import React from 'react';
 import user_icon from '../assets/user_icon.svg'
-import theme_pattern from '../assets/theme_pattern.svg'
+// import theme_pattern from '../assets/theme_pattern.svg'
 
 const Footer = () => {
     return (
